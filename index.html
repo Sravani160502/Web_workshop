@@ -304,11 +304,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </a>
 
-<h2>Video</h2>
+<!-- <h2>Video</h2> -->
+    <div style = "text-align: center;">
     <video width="640" height="360" controls>
         <source src="Airforece 3.mp4" type="video/mp4">
        
     </video>
+        </div>
+
+<div style="font-family: Arial, sans-serif; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f4f4f4;">
+        <div style="background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); width: 100%; max-width: 500px;">
+            <h1 style="margin-bottom: 1rem; text-align: center;">Feedback Form</h1>
+            <form action="/submit_feedback" method="post">
+                <label for="name" style="display: block; margin: 0.5rem 0;">Name:</label>
+                <input type="text" id="name" name="name" required style="width: 100%; padding: 0.5rem; margin: 0.5rem 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+
+                <label for="email" style="display: block; margin: 0.5rem 0;">Email:</label>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 0.5rem; margin: 0.5rem 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+
+                <label for="feedback" style="display: block; margin: 0.5rem 0;">Feedback:</label>
+                <textarea id="feedback" name="feedback" required style="width: 100%; height: 150px; padding: 0.5rem; margin: 0.5rem 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;"></textarea>
+
+                <label for="rating" style="display: block; margin: 0.5rem 0;">Rating:</label>
+                <select id="rating" name="rating" required style="width: 100%; padding: 0.5rem; margin: 0.5rem 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+                    <option value="">Select a rating</option>
+                    <option value="1">1 - Poor</option>
+                    <option value="2">2 - Fair</option>
+                    <option value="3">3 - Good</option>
+                    <option value="4">4 - Very Good</option>
+                    <option value="5">5 - Excellent</option>
+                </select>
+
+                <button type="submit" style="background-color: #007bff; color: #fff; border: none; padding: 0.75rem; border-radius: 4px; cursor: pointer; font-size: 1rem; width: 100%; margin-top: 1rem;">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
 
     
 </body> 
