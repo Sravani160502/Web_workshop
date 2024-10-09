@@ -55,7 +55,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-W37HFWZL');</script>
 <!-- End Google Tag Manager -->
 
-      
+<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWP3XHGY53"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-FWP3XHGY53');
+    </script>
 
     
 </head>
@@ -393,9 +401,95 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   replace "TAG_ID" with your tag ID.
   Learn more: https://support.google.com/tagmanager/answer/12326985
 -->
+<div>Order your items here</div>
+    <button> View Items</button>
+    <script>
+  gtag("event", "view_item_list", {
+  item_list_id: "related_products",
+  item_list_name: "Related products",
+  items: [
+        // If someone purchases more than one item,
+        // you can add those items to the items array
+         {
+          item_id: "SKU_12345",
+          item_name: "Stan and Friends Tee",
+          affiliation: "Google Merchandise Store",
+          coupon: "SUMMER_FUN",
+          discount: 2.22,
+          index: 0,
+          item_brand: "Google",
+          item_category: "Apparel",
+          item_category2: "Adult",
+          item_category3: "Shirts",
+          item_category4: "Crew",
+          item_category5: "Short sleeve",
+          item_list_id: "related_products",
+          item_list_name: "Related Products",
+          item_variant: "green",
+          location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+          price: 10.01,
+          quantity: 3
+        }]
+    });
+
+    </script>
+
+<button id="select-item">Select Item</button>
+    <script>
+document.getElementById("select-item").addEventListener("click", function() {
+    gtag('event', 'select_item', {
+        'item_id': 'item_001',
+        'item_name': 'Sample Smartphone',
+        'category': 'Electronics'
+    });
+});
+</script>
+
+
+<button id="add-to-cart">Add to Cart</button>
+<script>
+document.getElementById("add-to-cart").addEventListener("click", function() {
+    gtag('event', 'add_to_cart', {
+        'item_id': 'item_001',
+        'item_name': 'Sample Smartphone',
+        'category': 'Electronics',
+        'price': 499.99,
+        'quantity': 1
+    });
+});
+</script>
+
+<button id="remove-from-cart">Remove from Cart</button>
+<script>
+document.getElementById("remove-from-cart").addEventListener("click", function() {
+    gtag('event', 'remove_from_cart', {
+        'item_id': 'item_001',
+        'item_name': 'Sample Smartphone',
+        'category': 'Electronics'
+    });
+});
+</script>
+
+<button id="start-checkout">Start Checkout</button>
+<script>
+document.getElementById("start-checkout").addEventListener("click", function() {
+    gtag('event', 'begin_checkout', {
+        'items': [{
+            'item_id': 'item_001',
+            'item_name': 'Sample Smartphone',
+            'category': 'Electronics',
+            'price': 499.99,
+            'quantity': 1
+        }]
+    });
+});
+</script>
+     
 </body> 
 
 </html>
+
+
 
 
 
@@ -433,112 +527,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </script> 
 </body>
 </html>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWP3XHGY53"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-FWP3XHGY53');
-    </script>
-</head>
-<body>
-    <div>Order your items here</div>
-    <button> View Items</button>
-    <script>
-  gtag("event", "view_item_list", {
-  item_list_id: "related_products",
-  item_list_name: "Related products",
-  items: [
-        // If someone purchases more than one item,
-        // you can add those items to the items array
-         {
-          item_id: "SKU_12345",
-          item_name: "Stan and Friends Tee",
-          affiliation: "Google Merchandise Store",
-          coupon: "SUMMER_FUN",
-          discount: 2.22,
-          index: 0,
-          item_brand: "Google",
-          item_category: "Apparel",
-          item_category2: "Adult",
-          item_category3: "Shirts",
-          item_category4: "Crew",
-          item_category5: "Short sleeve",
-          item_list_id: "related_products",
-          item_list_name: "Related Products",
-          item_variant: "green",
-          location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
-          price: 10.01,
-          quantity: 3
-        }]
-    });
-    </script>
-    <body>
-    <button id="select-item">Select Item</button>
-<script>
-document.getElementById("select-item").addEventListener("click", function() {
-    gtag('event', 'select_item', {
-        'item_id': 'item_001',
-        'item_name': 'Sample Smartphone',
-        'category': 'Electronics'
-    });
-});
-</script>
-<button id="view-item">View Item Details</button>
-<script>
-document.getElementById("view-item").addEventListener("click", function() {
-    gtag('event', 'view_item', {
-        'item_id': 'item_001',
-        'item_name': 'Sample Smartphone',
-        'category': 'Electronics',
-        'price': 499.99
-    });
-});
-</script>
-<button id="add-to-cart">Add to Cart</button>
-<script>
-document.getElementById("add-to-cart").addEventListener("click", function() {
-    gtag('event', 'add_to_cart', {
-        'item_id': 'item_001',
-        'item_name': 'Sample Smartphone',
-        'category': 'Electronics',
-        'price': 499.99,
-        'quantity': 1
-    });
-});
-</script>
-<button id="remove-from-cart">Remove from Cart</button>
-<script>
-document.getElementById("remove-from-cart").addEventListener("click", function() {
-    gtag('event', 'remove_from_cart', {
-        'item_id': 'item_001',
-        'item_name': 'Sample Smartphone',
-        'category': 'Electronics'
-    });
-});
-</script>
-<button id="start-checkout">Start Checkout</button>
-<script>
-document.getElementById("start-checkout").addEventListener("click", function() {
-    gtag('event', 'begin_checkout', {
-        'items': [{
-            'item_id': 'item_001',
-            'item_name': 'Sample Smartphone',
-            'category': 'Electronics',
-            'price': 499.99,
-            'quantity': 1
-        }]
-    });
-});
-</script>
-</body>
 
 
 
